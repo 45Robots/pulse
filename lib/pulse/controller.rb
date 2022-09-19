@@ -6,7 +6,7 @@ class PulseController < ActionController::Base
   # returned, 'OK' is displayed and a 200 response code is returned. If not,
   # 'ERROR' is returned along with a 500 response code.
   def pulse
-    adapter = ActiveRecord::Base::connection_pool.spec.config[:adapter]
+    adapter = ActiveRecord::Base::connection_pool.db_config.adapter
 
     health_method = "#{adapter}_healthy?"
 
