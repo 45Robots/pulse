@@ -75,7 +75,7 @@ class PulseController < ActionController::Base
   end
 
   def okay_response
-    "<html><body>OK  #{Time.now.utc.to_s(:db)}</body></html>"
+    "<html><body>OK  #{Time.now.utc.to_fs(:db)}</body></html>"
   end
 
   def error_response
